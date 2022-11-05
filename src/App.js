@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
+import Character from "./pages/Character";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
-import Todos from "./pages/Todos";
+// import Todos from "./pages/Todos";
 
 import userService from './services/userService'
 
@@ -73,7 +74,10 @@ function App() {
                             />
                         } 
                     />
-                    <Route path='/todos' element={<Todos user={user.username} />} />
+                    {/* <Route path='/todos' element={<Todos user={user.username} />} /> */}
+
+                      <Route path='/character' element={<Character user={user.username} />} />
+
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             )

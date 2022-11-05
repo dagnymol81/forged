@@ -1,5 +1,3 @@
-import axios from "axios";
-
 import { useEffect, useRef, useState } from "react";
 
 import todoService from '../services/todoService'
@@ -11,9 +9,7 @@ function Todos ({ user }) {
     let notesRef = useRef()
 
     const getAllTodos = async () => {
-
         try {
-            
             const response = await todoService.index()
 
             setTodos(response.data.todos)

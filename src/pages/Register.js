@@ -24,9 +24,11 @@ function Register({ setUser }) {
         e.preventDefault()
 
         try {
-            const response = await authService.register(form)  
+            const response = await authService.register(form)
+            
+            //need to set token before user service
+            
             localStorage.setItem("token", response.data.token)
-
             const info = await userService.info()
 
             setUser(info.data)
