@@ -1,5 +1,6 @@
-import { useState } from "react"
+import {  useState  } from "react"
 import CharacterInfo from "../components/CharacterInfo"
+import Status from "../components/Status"
 import characterService from '../services/characterService'
 
 export default function Character({ user }) {
@@ -13,7 +14,16 @@ export default function Character({ user }) {
     heritage: '',
     background: '',
     vice: '',
-    purveyor: ''
+    purveyor: '',
+    stress: 0,
+    trauma: 0,
+    injuries: [],
+    harm: 0,
+    healing: 0,
+    usedArmor: false,
+    usedHeavy: false,
+    usedSpecial: false,
+    notes: ''
   })
 
   const updateCharacter = (e) => {
@@ -37,7 +47,10 @@ export default function Character({ user }) {
   return (
       <div>
         <form onSubmit={handleSubmit}>
-          <CharacterInfo character={character} updateCharacter={updateCharacter} />
+
+        <CharacterInfo character={character} updateCharacter={updateCharacter} />
+        <Status character={character} updateCharacter={updateCharacter} setCharacter={setCharacter} stress={character.stress} />
+
         <button>Save</button>
         </form>
 
