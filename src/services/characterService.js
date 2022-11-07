@@ -20,9 +20,14 @@ const add = (newCharacter) => {
     return axiosCharacter().post('/add', newCharacter)
 }
 
+const show = () => {
+  return axiosCharacter().get('/:id')
+}
+
 const services = {
     index,
-    add
+    add,
+    show
 }
 
 export default services

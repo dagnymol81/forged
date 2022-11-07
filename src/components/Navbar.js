@@ -24,6 +24,9 @@ function Navbar({ user, setUser }) {
                 <li>
                     <Link to="/profile">Profile</Link>
                 </li>
+                <li>
+                  <Link to="/crew">My Characters</Link>
+                </li>
                 <li onClick={logout}>
                     <Link>Logout</Link>
                 </li>

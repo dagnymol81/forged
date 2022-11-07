@@ -85,11 +85,6 @@ export default function CharacterInfo({ character, updateCharacter }) {
           />
         </label>
 
-        <div>
-          I'm going to say some stuff
-        </div>
-
-
         </>
   )
 }

@@ -18,9 +18,11 @@ const add = async (req, res) => {
     }
 }
 
-const show = (req, res) => {
+const show = async (req, res) => {
   try {
-    const foundCharacter = Character.findById( { id: req.id })
+    console.log('show route')
+    console.log(req.params.id)
+    const foundCharacter = Character.findById( { id: req.params.id })
     res.status(200).json({ character: foundCharacter })
 } catch (error) {
     res.status(400).json({ error: error.message })

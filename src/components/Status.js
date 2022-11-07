@@ -3,8 +3,6 @@ export default function Status({ updateCharacter, deployArmor, markClock}) {
   //todo: display
   //todo: mark boxes according to number
 
-
-
   return (
     <div>
       <div id="stress">

@@ -6,8 +6,10 @@ import Character from "./pages/Character";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import MyCharacters from "./pages/MyCharacters";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
+import ShowCharacter from "./pages/ShowCharacter";
 // import Todos from "./pages/Todos";
 
 import userService from './services/userService'
@@ -77,8 +79,10 @@ function App() {
                     {/* <Route path='/todos' element={<Todos user={user.username} />} /> */}
 
                       <Route path='/character' element={<Character user={user.username} />} />
-
-                    <Route path="*" element={<Navigate to="/" />} />
+                      <Route path='/crew' element={<MyCharacters user={user.username} />} /> 
+                      <Route path='/:id' element={<ShowCharacter />} />
+{/* 
+                    <Route path="*" element={<Navigate to="/" />} /> */}
                 </Routes>
             )
         } else {
