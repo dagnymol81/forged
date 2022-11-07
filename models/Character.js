@@ -21,6 +21,11 @@ const characterSchema = new Schema({
     usedHeavy: { type: Boolean, default: false },
     usedSpecial: { type: Boolean, default: false },
     notes: { type: String, default: '' },
+    level3harm: { type: String, default: '' },
+    level2First: { type: String, default: ''},
+    level2Second: { type: String, default: '' },
+    level1First: { type: String, default: '' },
+    level1Second: { type: String, default: '' }
   })
 
 const CharacterModel = mongoose.model('Character', characterSchema)

@@ -1,4 +1,4 @@
-export default function CharacterInfo({ character, updateCharacter, stress }) {
+export default function CharacterInfo({ character, updateCharacter }) {
 
   return(
 <>

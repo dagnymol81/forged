@@ -23,7 +23,12 @@ export default function Character({ user }) {
     usedArmor: false,
     usedHeavy: false,
     usedSpecial: false,
-    notes: ''
+    notes: '',
+    level1First: '',
+    level1Second: '',
+    level2First: '',
+    level2Second: '',
+    level3harm: '',
   })
 
   const updateCharacter = (e) => {
@@ -32,6 +37,29 @@ export default function Character({ user }) {
       ...existingValues,
       [fieldName]: e.target.value,
     }))
+  }
+
+  const markClock = (e) => {
+    let clockName = e.target.parentNode.id //should match the name of the Character property we are changing
+    let container = document.getElementById(clockName) //div the inputs are in
+    let marked = container.querySelectorAll('input[type="checkbox"]:checked').length //how many are checked
+    setCharacter(existingValues => ({ //update state with new value for clock
+      ...existingValues,
+      [clockName]: marked
+    }))
+  }
+
+  const deployArmor = (e) => {
+    const fieldName = e.target.name
+    e.target.checked 
+      ? setCharacter(existingValues => ({
+        ...existingValues,
+        [fieldName]: true
+      }))
+      : setCharacter(existingValues => ({
+        ...existingValues,
+        [fieldName]: false
+      }))
   }
 
   const handleSubmit = async(e) => {
@@ -49,7 +77,7 @@ export default function Character({ user }) {
         <form onSubmit={handleSubmit}>
 
         <CharacterInfo character={character} updateCharacter={updateCharacter} />
-        <Status character={character} updateCharacter={updateCharacter} setCharacter={setCharacter} stress={character.stress} />
+        <Status updateCharacter={updateCharacter} deployArmor={deployArmor} markClock={markClock} />
 
         <button>Save</button>
         </form>

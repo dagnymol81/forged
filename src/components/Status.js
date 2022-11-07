@@ -1,115 +1,104 @@
-import { useRef } from "react"
+export default function Status({ updateCharacter, deployArmor, markClock}) {
 
-export default function Status({ character, setCharacter, updateCharacter, }) {
-
+  //todo: display
   //todo: mark boxes according to number
 
-  let stress = useRef(character.stress)
-  const countStress = (e) => {
-      if (e.target.checked) {
-        stress.current++
-      } else {
-        stress.current--
-      }
-      setCharacter(existingValues => ({
-        ...existingValues,
-        stress: stress.current
-      }))
-    }
 
-    let trauma = useRef(character.trauma)
-    const countTrauma = (e) => {
-        if (e.target.checked) {
-          trauma.current++
-        } else {
-          trauma.current--
-        }
-        setCharacter(existingValues => ({
-          ...existingValues,
-          trauma: trauma.current
-        }))
-      }
-
-      let healing = useRef(character.healing)
-      const countHealing = (e) => {
-        if (e.target.checked) {
-          healing.current++
-        } else {
-          healing.current--
-        }
-        setCharacter(existingValues => ({
-          ...existingValues,
-          healing: healing.current
-        }))
-      }
-
-  //todo: injuries
-
-  const useArmor = (e) => {
-    if (e.target.checked) {
-      character.usedArmor = true
-    } else {
-      character.usedArmor = false
-    }
-    console.log("armor used: " + character.usedArmor)
-  }
-
-  const useHeavy = (e) => {
-    if (e.target.checked) {
-      character.usedHeavy = true
-    } else {
-      character.usedHeavy = false
-    }
-    console.log("heavy armor used: " + character.usedHeavy)
-  }
-
-  const useSpecial = (e) => {
-    if (e.target.checked) {
-      character.usedSpecial = true
-    } else {
-      character.usedSpecial = false
-    }
-    console.log("special armor used: " + character.usedSpecial)
-  }
- 
 
   return (
     <div>
-      <div>
+      <div id="stress">
         Stress:
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
-        <input type="checkbox" onChange={countStress} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
       </div>
-      <div>
+
+      <div id="trauma">
         Trauma:
-        <input type="checkbox" onChange={countTrauma} />
-        <input type="checkbox" onChange={countTrauma} />
-        <input type="checkbox" onChange={countTrauma} />
-        <input type="checkbox" onChange={countTrauma} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
       </div>
-      <div>
+
+      <div id="healing">
         Healing:
-        <input type="checkbox" onChange={countHealing} />
-        <input type="checkbox" onChange={countHealing} />
-        <input type="checkbox" onChange={countHealing} />
-        <input type="checkbox" onChange={countHealing} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} />
       </div>
+
       <div>Armor Used:
-        <label>Armor: <input type="checkbox" onChange={useArmor} /></label>
+        <label>Armor: 
+          <input 
+            type="checkbox" 
+            name="usedArmor" 
+            onChange={deployArmor} 
+            />
+        </label>
         <label>Heavy: 
-        <input type="checkbox" onChange={useHeavy} />
+          <input 
+            type="checkbox" 
+            name="usedHeavy" 
+            onChange={deployArmor} 
+            />
         </label>
         <label> Special:
-        <input type="checkbox" onChange={useSpecial} />
+        <input 
+          type="checkbox" 
+          name="usedSpecial" 
+          onChange={deployArmor} 
+          />
         </label>
       </div>
+
+      <div>
+        Injuries:
+        <div>
+          Level 3:
+            <input
+              type="text"
+              name="level3harm"
+              onChange={updateCharacter}
+            />
+        </div>
+        <div>
+          Level 2:
+            <input
+              type="text"
+              name="level2first"
+              onChange={updateCharacter}
+            />
+            <input
+              type="text"
+              name="level2second"
+              onChange={updateCharacter}
+            />
+        </div>
+        <div>
+          Level 1:
+          <input
+            type="text"
+            name="level1first"
+            onChange={updateCharacter}
+          />
+          <input
+            type="text"
+            name="level1second"
+            onChange={updateCharacter}
+          />
+        </div>
+
+      </div>
+
       <div>
         <textarea name="notes" onChange={updateCharacter} />
       </div>
