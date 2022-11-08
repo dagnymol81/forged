@@ -18,11 +18,9 @@ const add = async (req, res) => {
     }
 }
 
-const show = async (req, res) => {
+const find = async (req, res) => {
   try {
-    console.log('show route')
-    console.log(req.params.id)
-    const foundCharacter = Character.findById( { id: req.params.id })
+    const foundCharacter = await Character.findById(req.params.id)
     res.status(200).json({ character: foundCharacter })
 } catch (error) {
     res.status(400).json({ error: error.message })
@@ -32,5 +30,5 @@ const show = async (req, res) => {
 module.exports = {
     index, 
     add,
-    show
+    find
 }

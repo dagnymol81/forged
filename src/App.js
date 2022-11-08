@@ -91,6 +91,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login setUser={setUser} />} />
                     <Route path="/register" element={<Register setUser={setUser} />} />
+                    <Route path="/find" element={<ShowCharacter />} />
                     <Route path="*" element={<Navigate to="/login" />} />
                 </Routes>
             )

@@ -1,4 +1,5 @@
-export default function ShowInfo( character ) {
+export default function ShowInfo({ character }) {
+  return(
   <div>
     Character Name: {character.name}<br />
     Crew: {character.crew}<br />
@@ -7,6 +8,7 @@ export default function ShowInfo( character ) {
     Heritage: {character.heritage}<br />
     Background: {character.background}<br />
     Vice: {character.vice}<br />
-    Purveyor: {character.purveyour}
+    Purveyor: {character.purveyor}
   </div>
+  )
 }

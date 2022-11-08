@@ -15,7 +15,7 @@ function Navbar({ user, setUser }) {
                         <img src="./favicon.ico" alt="React Icon" id="icon"/>
                     </Link>
                 </li>
-                <li style={{ color: 'black' }}>
+                <li>
                     Welcome {user}!
                 </li>
                 <li>

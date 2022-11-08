@@ -4,6 +4,6 @@ const charCtrl = require('../controllers/characterController')
 
 router.get('/index', charCtrl.index)
 router.post('/add', charCtrl.add)
-router.get('/:id', charCtrl.show)
+router.get('/:id', charCtrl.find)
 
 module.exports = router

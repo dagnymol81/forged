@@ -1,7 +1,4 @@
-export default function Status({ updateCharacter, deployArmor, markClock}) {
-
-  //todo: display
-  //todo: mark boxes according to number
+export default function Status({ updateCharacter, deployArmor, markClock, character }) {
 
   return (
     <div>
@@ -98,7 +95,7 @@ export default function Status({ updateCharacter, deployArmor, markClock}) {
       </div>
 
       <div>
-        <textarea name="notes" onChange={updateCharacter} />
+        <textarea name="notes" onChange={updateCharacter} value={character.notes}  />
       </div>
     </div>
 

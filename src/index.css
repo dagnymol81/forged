@@ -9,6 +9,8 @@ ul {
     list-style: none;
     margin-bottom: 50px;
     height: 50px;
+    background-color: navy;
+    color: white;
 }
 
 #icon {
@@ -24,15 +26,10 @@ ul {
     height: 100vh;
 }
 
-form {
-    text-align: center;
-}
-
 h1 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-ul {
-    background-color: #61dafb;
-}
+a:link { color: skyblue }
+a:visited { color: pink }
