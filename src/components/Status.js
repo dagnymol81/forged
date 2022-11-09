@@ -1,34 +1,43 @@
+import { useEffect } from "react"
+
 export default function Status({ updateCharacter, deployArmor, markClock, character }) {
+
+  useEffect(() => {
+    if (character.stress) {
+      console.log(character.stress)
+    }
+  }, [character])
+
 
   return (
     <div>
       <div id="stress">
         Stress:
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 1} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 2} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 3} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 4} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 5} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 6} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 7} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 8} />
+        <input type="checkbox" onChange={markClock} checked={character.stress >= 9} />
       </div>
 
       <div id="trauma">
         Trauma:
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} checked={character.trauma >= 1} />
+        <input type="checkbox" onChange={markClock} checked={character.trauma >= 2} />
+        <input type="checkbox" onChange={markClock} checked={character.trauma >= 3} />
+        <input type="checkbox" onChange={markClock} checked={character.trauma >= 4} />
       </div>
 
       <div id="healing">
         Healing:
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
-        <input type="checkbox" onChange={markClock} />
+        <input type="checkbox" onChange={markClock} checked={character.healing >= 1}  />
+        <input type="checkbox" onChange={markClock} checked={character.healing >= 2} />
+        <input type="checkbox" onChange={markClock} checked={character.healing >= 3} />
+        <input type="checkbox" onChange={markClock} checked={character.healing >= 4} />
       </div>
 
       <div>Armor Used:
@@ -37,6 +46,7 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
             type="checkbox" 
             name="usedArmor" 
             onChange={deployArmor} 
+            checked={character.usedArmor}
             />
         </label>
         <label>Heavy: 
@@ -44,6 +54,7 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
             type="checkbox" 
             name="usedHeavy" 
             onChange={deployArmor} 
+            checked={character.usedHeavy}
             />
         </label>
         <label> Special:
@@ -51,6 +62,7 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
           type="checkbox" 
           name="usedSpecial" 
           onChange={deployArmor} 
+          checked={character.usedSpecial}
           />
         </label>
       </div>
@@ -63,7 +75,7 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
               type="text"
               name="level3harm"
               onChange={updateCharacter}
-              // value={character.level3harm}
+              value={character.level3harm}
             />
         </div>
         <div>
@@ -72,13 +84,13 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
               type="text"
               name="level2First"
               onChange={updateCharacter}
-              // value={character.level2First}
+              value={character.level2First}
             />
             <input
               type="text"
               name="level2Second"
               onChange={updateCharacter}
-              // value={character.level2Second}
+              value={character.level2Second}
             />
         </div>
         <div>
@@ -87,13 +99,13 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
             type="text"
             name="level1First"
             onChange={updateCharacter}
-            // value={character.level1First}
+            value={character.level1First}
           />
           <input
             type="text"
             name="level1Second"
             onChange={updateCharacter}
-            // value={character.level1Second}
+            value={character.level1Second}
           />
         </div>
 
@@ -103,7 +115,7 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
         <textarea 
           name="notes" 
           onChange={updateCharacter} 
-          // value={character.notes}  
+          value={character.notes}  
         />
       </div>
     </div>

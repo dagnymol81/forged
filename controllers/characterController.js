@@ -31,6 +31,7 @@ const find = async (req, res) => {
 const update = async (req, res) => {
 
   const { id } = req.params
+  console.log(req.params.id)
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).json({error: 'No such character'})

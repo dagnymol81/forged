@@ -25,7 +25,8 @@ const find = (id) => {
 }
 
 const update = (updatedCharacter) => {
-  return axiosCharacter().patch('/:id', updatedCharacter)
+  const id = updatedCharacter._id
+  return axiosCharacter().patch(`/${id}`, updatedCharacter)
 }
 
 const services = {
