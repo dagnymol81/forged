@@ -63,39 +63,48 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
               type="text"
               name="level3harm"
               onChange={updateCharacter}
+              // value={character.level3harm}
             />
         </div>
         <div>
           Level 2:
             <input
               type="text"
-              name="level2first"
+              name="level2First"
               onChange={updateCharacter}
+              // value={character.level2First}
             />
             <input
               type="text"
-              name="level2second"
+              name="level2Second"
               onChange={updateCharacter}
+              // value={character.level2Second}
             />
         </div>
         <div>
           Level 1:
           <input
             type="text"
-            name="level1first"
+            name="level1First"
             onChange={updateCharacter}
+            // value={character.level1First}
           />
           <input
             type="text"
-            name="level1second"
+            name="level1Second"
             onChange={updateCharacter}
+            // value={character.level1Second}
           />
         </div>
 
       </div>
 
       <div>
-        <textarea name="notes" onChange={updateCharacter} value={character.notes}  />
+        <textarea 
+          name="notes" 
+          onChange={updateCharacter} 
+          // value={character.notes}  
+        />
       </div>
     </div>
 

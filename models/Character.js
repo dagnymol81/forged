@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const characterSchema = new Schema({ 
-    user: { type: String, required: true },
+    user: { type: String, },
     characterName: { type: String, default: '' },
     crew: { type: String, default: '' },
     alias: { type: String, default: '' },

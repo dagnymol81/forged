@@ -11,9 +11,7 @@ function Todos ({ user }) {
     const getAllTodos = async () => {
         try {
             const response = await todoService.index()
-
             setTodos(response.data.todos)
-
         } catch (error) {
             console.log(error)
         }

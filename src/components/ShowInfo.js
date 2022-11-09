@@ -1,7 +1,7 @@
 export default function ShowInfo({ character }) {
   return(
   <div>
-    Character Name: {character.name}<br />
+    Character Name: {character.characterName}<br />
     Crew: {character.crew}<br />
     Alias: {character.alias}<br />
     Look: {character.look}<br />

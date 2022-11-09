@@ -24,10 +24,15 @@ const find = (id) => {
   return axiosCharacter().get(`/${id}`)
 }
 
+const update = (updatedCharacter) => {
+  return axiosCharacter().patch('/:id', updatedCharacter)
+}
+
 const services = {
     index,
     add,
-    find
+    find,
+    update
 }
 
 export default services

@@ -1,4 +1,4 @@
-export default function CharacterInfo({ character, updateCharacter }) {
+export default function CharacterInfo({ updateCharacter }) {
 
   return(
 <>
@@ -8,7 +8,6 @@ export default function CharacterInfo({ character, updateCharacter }) {
             type="text"
             name="characterName"
             id="characterName"
-            value={character.characterName}
             onChange={updateCharacter}
           />
         </label>
@@ -29,7 +28,6 @@ export default function CharacterInfo({ character, updateCharacter }) {
             type="text"
             name="alias"
             id="alias"
-            value={character.alias}
             onChange={updateCharacter}
           />
         </label>

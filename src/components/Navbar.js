@@ -19,7 +19,7 @@ function Navbar({ user, setUser }) {
                     Welcome {user}!
                 </li>
                 <li>
-                    <Link to="/character">Character</Link>
+                    <Link to="/create">New Character</Link>
                 </li>
                 <li>
                     <Link to="/profile">Profile</Link>

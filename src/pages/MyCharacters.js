@@ -31,7 +31,6 @@ export default function MyCharacters ({ user }) {
                     <Link to={`/${t._id}`}>
                     {t.characterName}
                     </Link>
-                    {/* <a href={`/character/${t._id}`}>{t.characterName}</a> */}
                     </div>
                 )}
            
