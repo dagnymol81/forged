@@ -1,4 +1,4 @@
-const abilities = [
+const startingAbilities = [
   {
     name: 'Battleborn',
     shortDesc: 'You may expend your special armor to reduce harm from an attack in combat or to push yourself during a fight.',
@@ -211,4 +211,4 @@ const abilities = [
   }
 ]
 
-export default abilities
+export default startingAbilities

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect, } from "react";
 import { useParams } from "react-router-dom";
+import CharacterInfo from "../components/CharacterInfo";
 import ShowInfo from "../components/ShowInfo";
 import Status from "../components/Status";
 import characterService from '../services/characterService'
@@ -18,10 +19,6 @@ export default function ShowCharacter() {
           console.log(error)
       }
   }
-
-  // const initializeClock = (field) => {
-  //   console.log('initializing ' + field + field.value)
-  // }
     
     useEffect(() => {
       getCharacter()
@@ -69,6 +66,15 @@ export default function ShowCharacter() {
   }
 }
 
+const [editMode, setEditMode] = useState(false)
+const handleEditMode = () => {
+  if (editMode) {
+    setEditMode(false)
+  } else {
+    setEditMode(true) 
+  }
+  
+}
 
   return ( 
     <div>
@@ -76,19 +82,30 @@ export default function ShowCharacter() {
 
     {character && character.characterName}
 
-      <form onSubmit={handleSubmit}>
-        {character && 
-          <ShowInfo 
-            character={character} 
+    <button onClick={handleEditMode}>Toggle Edit</button>
+    
+    <p>{editMode}</p>
+
+    <form onSubmit={handleSubmit}>
+
+      {character && !editMode &&
+        <ShowInfo 
+          character={character} 
         />}
 
-        {character && 
-          <Status 
-            character={character} 
-            updateCharacter={updateCharacter} 
-            deployArmor={deployArmor} 
-            markClock={markClock} 
+      {character && editMode &&
+        <CharacterInfo
+          updateCharacter={updateCharacter} 
+          character={character}
         />}
+
+      {character && 
+        <Status 
+          character={character} 
+          updateCharacter={updateCharacter} 
+          deployArmor={deployArmor} 
+          markClock={markClock} 
+      />}
 
         <button>Update</button>
       </form>

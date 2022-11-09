@@ -5,7 +5,7 @@ const User = require('../models/User')
 
 const createToken = (payload) => {
   console.log('creating token')
-  return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' })
+  return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '30d' })
 }
 
 

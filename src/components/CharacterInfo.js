@@ -1,4 +1,4 @@
-export default function CharacterInfo({ updateCharacter }) {
+export default function CharacterInfo({ updateCharacter, character }) {
 
   return(
 <>
@@ -9,6 +9,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="characterName"
             id="characterName"
             onChange={updateCharacter}
+            value={character.characterName}
           />
         </label>
 
@@ -19,6 +20,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="crew"
             id="crew"
             onChange={updateCharacter}
+            value={character.crew}
           />
         </label>
 
@@ -29,6 +31,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="alias"
             id="alias"
             onChange={updateCharacter}
+            value={character.alias}
           />
         </label>
 
@@ -39,6 +42,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="look"
             id="look"
             onChange={updateCharacter}
+            value={character.look}
           />
         </label>
 
@@ -49,6 +53,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="heritage"
             id="heritage"
             onChange={updateCharacter}
+            value={character.heritage}
           />
         </label>
 
@@ -59,6 +64,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="background"
             id="background"
             onChange={updateCharacter}
+            value={character.background}
           />
         </label>
 
@@ -70,6 +76,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="vice"
             id="vice"
             onChange={updateCharacter}
+            value={character.vice}
           />
         </label>
 
@@ -80,6 +87,7 @@ export default function CharacterInfo({ updateCharacter }) {
             name="purveyor"
             id="purveyor"
             onChange={updateCharacter}
+            value={character.purveyor}
           />
         </label>
 

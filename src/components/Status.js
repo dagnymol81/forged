@@ -1,13 +1,4 @@
-import { useEffect } from "react"
-
 export default function Status({ updateCharacter, deployArmor, markClock, character }) {
-
-  useEffect(() => {
-    if (character.stress) {
-      console.log(character.stress)
-    }
-  }, [character])
-
 
   return (
     <div>

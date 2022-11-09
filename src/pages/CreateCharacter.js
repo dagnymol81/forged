@@ -1,8 +1,13 @@
 import CharacterInfo from "../components/CharacterInfo"
 import {  useState  } from "react"
 import characterService from '../services/characterService'
+import { useNavigate } from "react-router-dom"
+import SelectAbility from "../components/SelectAbility"
+
 
 export default function CreateCharacter({ user }) {
+
+  const navigate = useNavigate()
 
   const [character, setCharacter] = useState({ 
     user,
@@ -39,25 +44,27 @@ export default function CreateCharacter({ user }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-  try {
-    const response = await characterService.add(character)
-    console.log(response)
-  } catch (error) {
-    console.log(error)
-  }
+    try {
+      const response = await characterService.add(character)
+      console.log(response)
+      navigate('/crew')
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return(
     <>
+    <form>
 
-<form onSubmit={handleSubmit}>
+      <SelectAbility />
 
-<CharacterInfo updateCharacter={updateCharacter} />
-
-        <button>Save</button>
-        </form>
-
-        </>
-
+      {/* <CharacterInfo 
+        updateCharacter={updateCharacter} 
+        character={character} />
+         */}
+      {/* <button onClick={handleSubmit}>Save</button> */}
+    </form>
+    </>
   )
 }
