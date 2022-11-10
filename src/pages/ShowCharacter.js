@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useEffect, } from "react";
 import { useParams } from "react-router-dom";
 import CharacterInfo from "../components/CharacterInfo";
+import ShowAbilities from "../components/ShowAbilities";
 import ShowInfo from "../components/ShowInfo";
+import ShowItems from "../components/ShowItems";
 import Status from "../components/Status";
 import characterService from '../services/characterService'
 
@@ -106,6 +108,17 @@ const handleEditMode = () => {
           deployArmor={deployArmor} 
           markClock={markClock} 
       />}
+
+      {character && 
+        <ShowAbilities
+          abilities={character.abilities}
+      />}
+
+      {character &&
+      <ShowItems
+        items={character.items}
+      />
+      }
 
         <button>Update</button>
       </form>

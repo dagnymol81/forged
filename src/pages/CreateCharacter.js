@@ -3,7 +3,9 @@ import {  useState  } from "react"
 import characterService from '../services/characterService'
 import { useNavigate } from "react-router-dom"
 import SelectAbility from "../components/SelectAbility"
-
+import SelectFriends from "../components/SelectFriends"
+import items from '../data/items'
+import SelectItems from "../components/SelectItems"
 
 export default function CreateCharacter({ user }) {
 
@@ -33,6 +35,38 @@ export default function CreateCharacter({ user }) {
     level2Second: '',
     level3harm: '',
     abilities: [],
+    friends: [
+    {
+      id: '1',
+      name: '',
+      closeFriend: false,
+      rival: false,
+    },
+    {
+      id: '2',
+      name: '',
+      closeFriend: false,
+      rival: false,
+    },
+    {
+      id: '3',
+      name: '',
+      closeFriend: false,
+      rival: false,
+    },
+    {
+      id: '4',
+      name: '',
+      closeFriend: false,
+      rival: false,
+    },
+    {
+      id: '5',
+      name: '',
+      closeFriend: false,
+      rival: false,
+    }],
+    items: items.standardItems
   })
   
   const updateCharacter = (e) => {
@@ -58,7 +92,18 @@ export default function CreateCharacter({ user }) {
     <>
     <form>
 
-      <SelectAbility character={character} setCharacter={setCharacter} />
+      {/* <SelectAbility character={character} setCharacter={setCharacter} /> */}
+
+      {/* <SelectFriends 
+        updateCharacter={updateCharacter}
+        setCharacter={setCharacter}
+        character={character}
+      /> */}
+
+      <SelectItems
+        character={character}
+        setCharacter={setCharacter}
+      />
 
       <CharacterInfo 
         updateCharacter={updateCharacter} 
