@@ -32,6 +32,7 @@ export default function CreateCharacter({ user }) {
     level2First: '',
     level2Second: '',
     level3harm: '',
+    abilities: [],
   })
   
   const updateCharacter = (e) => {
@@ -57,13 +58,13 @@ export default function CreateCharacter({ user }) {
     <>
     <form>
 
-      <SelectAbility />
+      <SelectAbility character={character} setCharacter={setCharacter} />
 
-      {/* <CharacterInfo 
+      <CharacterInfo 
         updateCharacter={updateCharacter} 
         character={character} />
-         */}
-      {/* <button onClick={handleSubmit}>Save</button> */}
+        
+      <button onClick={handleSubmit}>Save</button>
     </form>
     </>
   )

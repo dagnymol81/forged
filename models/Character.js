@@ -25,7 +25,8 @@ const characterSchema = new Schema({
     level2First: { type: String, default: ''},
     level2Second: { type: String, default: '' },
     level1First: { type: String, default: '' },
-    level1Second: { type: String, default: '' }
+    level1Second: { type: String, default: '' },
+    abilities: { type: Array, default: []}
   })
 
 const CharacterModel = mongoose.model('Character', characterSchema)
