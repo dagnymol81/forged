@@ -6,6 +6,8 @@ import SelectAbility from "../components/SelectAbility"
 import SelectFriends from "../components/SelectFriends"
 import items from '../data/items'
 import SelectItems from "../components/SelectItems"
+import Skills from "../components/Skills"
+import Coin from "../components/Coin"
 
 export default function CreateCharacter({ user }) {
 
@@ -81,6 +83,9 @@ export default function CreateCharacter({ user }) {
     skill10: 0,
     skill11: 0,
     skill12: 0,
+    insightXP: 0,
+    prowessXP: 0,
+    resolveXP: 0,
   })
 
   const markClock = (e) => {
@@ -124,14 +129,24 @@ export default function CreateCharacter({ user }) {
         character={character}
       /> */}
 
-      <SelectItems
+      {/* <SelectItems
         character={character}
         setCharacter={setCharacter}
-      />
+      /> */}
 
       <CharacterInfo 
         updateCharacter={updateCharacter} 
         character={character} />
+
+      <Skills
+        character={character}
+        markClock={markClock}
+      />
+
+      <Coin
+        character={character}
+        markClock={markClock}
+      />
         
       <button onClick={handleSubmit}>Save</button>
     </form>

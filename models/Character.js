@@ -31,6 +31,21 @@ const characterSchema = new Schema({
     items: [],
     coin: 0,
     stash: 0,
+    skill1: 0,
+    skill2: 0,
+    skill3: 0,
+    skill4: 0,
+    skill5: 0,
+    skill6: 0,
+    skill7: 0,
+    skill8: 0,
+    skill9: 0,
+    skill10: 0,
+    skill11: 0,
+    skill12: 0,
+    insightXP: 0,
+    prowessXP: 0,
+    resolveXP: 0,
   })
 
 const CharacterModel = mongoose.model('Character', characterSchema)

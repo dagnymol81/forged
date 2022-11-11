@@ -1,8 +1,12 @@
+import MarkXP from "./MarkXP";
+
 export default function Skills({ character, markClock }) {
 
   return(
     <>
       <div id="insight">
+
+        <MarkXP stat={character.insightXP} markClock={markClock} statName="insightXP" />
 
         <div id="skill1">
         Hunt: 
@@ -42,6 +46,8 @@ export default function Skills({ character, markClock }) {
 
       <div id="prowess">
 
+      <MarkXP stat={character.prowessXP} markClock={markClock} statName="prowessXP" />
+
         <div id="skill5">
         Finesse:
           <input type="checkbox" onChange={markClock} checked={character.skill5 >= 1} />
@@ -78,6 +84,8 @@ export default function Skills({ character, markClock }) {
       </div>
 
       <div id="resolve">
+
+      <MarkXP stat={character.resolveXP} markClock={markClock} statName="resolveXP" />
 
       <div id="skill9">
         Attune:
