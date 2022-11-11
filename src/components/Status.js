@@ -102,13 +102,7 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
 
       </div>
 
-      <div>
-        <textarea 
-          name="notes" 
-          onChange={updateCharacter} 
-          value={character.notes}  
-        />
-      </div>
+
     </div>
 
   )

@@ -50,7 +50,7 @@ export default function SelectAbility({ character, setCharacter }) {
       )
     })}
 
-    {startingAbilities.map((ability) => {
+    {/* {startingAbilities.map((ability) => {
       return(
         <div 
           key={ability.name} 
@@ -64,7 +64,7 @@ export default function SelectAbility({ character, setCharacter }) {
         </div>
       )
 
-    })}
+    })} */}
     </>
   )
 }

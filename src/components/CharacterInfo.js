@@ -1,97 +1,116 @@
 export default function CharacterInfo({ updateCharacter, character }) {
 
   return(
-<>
-        <label>
+      <>
+        <label className="name" htmlFor="characterName">
           Character Name: 
+        </label>
+
           <input
             type="text"
             name="characterName"
             id="characterName"
+            className="name-input"
             onChange={updateCharacter}
             value={character.characterName}
           />
-        </label>
 
-        <label>
-          Crew 
-          <input
-            type="text"
-            name="crew"
-            id="crew"
-            onChange={updateCharacter}
-            value={character.crew}
-          />
-        </label>
 
-        <label>
+        <label className="alias" htmlFor="alias">
           Alias 
+        </label>
+
           <input
             type="text"
             name="alias"
             id="alias"
+            className="alias-input"
             onChange={updateCharacter}
             value={character.alias}
           />
+
+
+        <label className="crew" htmlFor="crew">
+          Crew 
+        </label>
+          <input
+            type="text"
+            name="crew"
+            id="crew"
+            className="crew-input"
+            onChange={updateCharacter}
+            value={character.crew}
+          />
+
+        <label className="look" htmlFor="look">
+          Look 
         </label>
 
-        <label>
-          Look 
           <input
             type="text"
             name="look"
             id="look"
+            className="look-input"
             onChange={updateCharacter}
             value={character.look}
           />
-        </label>
 
-        <label>
+        <label className="heritage" htmlFor="heritage">
           Heritage 
+        </label>
           <input
             type="text"
             name="heritage"
             id="heritage"
+            className="heritage-input"
             onChange={updateCharacter}
             value={character.heritage}
           />
+
+        <label className="background" htmlFor="background">
+          Background 
         </label>
 
-        <label>
-          Background 
           <input
             type="text"
             name="background"
             id="background"
+            className="background-input"
             onChange={updateCharacter}
             value={character.background}
           />
+
+
+
+
+        <label className="vice" htmlFor="vice">
+          Vice
         </label>
 
-
-        <label>
-          Vice
           <input
             type="text"
             name="vice"
             id="vice"
+            className="vice-input"
             onChange={updateCharacter}
             value={character.vice}
           />
+
+
+        <label className="purveyor" htmlFor="purveyor">
+          Purveyor
         </label>
 
-        <label>
-          Purveyor
           <input
             type="text"
             name="purveyor"
             id="purveyor"
+            className="purveyor-input"
             onChange={updateCharacter}
             value={character.purveyor}
           />
-        </label>
 
-        </>
+      </>
   )
 }
 

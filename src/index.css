@@ -1,35 +1,137 @@
-* {
-    margin: 0;
+#create-character {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "info info skills"
+    "notes items skills"
+    "friends items abilities"
+    "xp items abilities";
+  gap: 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
 
-ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    margin-bottom: 50px;
-    height: 50px;
-    background-color: navy;
-    color: white;
+.info {
+  grid-area: info;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: max-content 1fr 1fr 1fr 1fr 1fr;
 }
 
-#icon {
-    position: absolute;
-    height: 40px;
-    top: 5px;
-    left: 5%;
+.name {
+  grid-column-start: 1;
+  grid-column-end: span 1;
 }
 
-.app {
-    background-color: rgb(17, 17, 17);
-    color: rgb(212, 212, 212);
-    height: 100vh;
+.name-input {
+  grid-column-start: 2;
+  grid-column-end: span 1;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+.alias {
+  grid-column-start: 3;
+  grid-column-end: span 1;
+  text-align: right;
 }
 
-a:link { color: skyblue }
-a:visited { color: pink }
+.alias-input {
+  grid-column-start: 4;
+  grid-column-end: span 1;
+}
+
+.crew {
+  grid-column-start: 5;
+  grid-column-end: span 1;
+  text-align: right;
+}
+
+.crew-input {
+  grid-column-start: 6;
+  grid-column-end: span 1;
+}
+
+.look {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+
+.look-input {
+  grid-column-start: 2;
+  grid-column-end: end;
+}
+
+.heritage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.heritage-input {
+  grid-column-start: 2;
+  grid-column-end: end;
+}
+
+.background {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+
+.background-input {
+  grid-column-start: 2;
+  grid-column-end: end;
+}
+
+.vice {
+  grid-column-start: 1;
+  grid-column-end: span 1;
+}
+
+.vice-input {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+.purveyor {
+  grid-column-start: 4;
+  grid-column-end: span 1;
+  text-align: right;
+}
+
+.purveyor-input {
+  grid-column-start: 5;
+  grid-column-end: end;
+}
+
+
+.abilities {
+  grid-area: abilities
+}
+
+.friends {
+  grid-area: friends;
+  padding: 1rem 0;
+}
+
+.items {
+  grid-area: items
+}
+
+.skills {
+  grid-area: skills
+}
+
+.xp {
+  grid-area: xp
+}
+
+.notes {
+  grid-area: notes
+}
+
+.notes textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}

@@ -3,11 +3,13 @@ export default function ShowItems({ items }) {
     <>
     <ul>
     {items && items.map((item, i) => {
+      if (item.name !== '') {
         return(
           <li key={i}>
-            {item.name}: {item.load}
+            {item.name}
           </li>
         )
+      }
       })}
     </ul>
     </>

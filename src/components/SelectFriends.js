@@ -47,33 +47,42 @@ export default function SelectFriends({ character, setCharacter }) {
 
   return(
     <>
-        <input 
-          type="text"
-          name="1"
-          id="1"
-          onChange={updateFriend}
-          value={friends[0].name}
-        />
-        <input
-          type="checkbox"
-          name="1"
-          id="1"
-          onChange={selectCloseFriend}
-          value={character.friends[0].isCloseFriend}
-        />
-        <input
-          type="checkbox"
-          name="1"
-          id="1"
-          onChange={selectRival}
-          value={character.friends[0].isRival}
-        />
+    <h3>Friends</h3>
+
+        <div class="input-group-text input-group-sm">
+          <input 
+            type="text"
+            name="1"
+            id="1"
+            className="form-control"
+            onChange={updateFriend}
+            value={friends[0].name}
+          />
+          <input
+            type="checkbox"
+            name="1"
+            id="1"
+            className="form-check-input mt-0"
+            onChange={selectCloseFriend}
+            value={character.friends[0].isCloseFriend}
+          />
+          <input
+            type="checkbox"
+            name="1"
+            id="1"
+            className="form-check-input mt-0"
+            onChange={selectRival}
+            value={character.friends[0].isRival}
+          />
+        </div>
 
 
+        <div class="input-group-text input-group-sm">
         <input 
           type="text"
           name="2"
           id="2"
+          className="form-control"
           onChange={updateFriend}
           value={friends[1].name}
         />
@@ -81,6 +90,7 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="2"
           id="2"
+          className="form-check-input mt-0"
           onChange={selectCloseFriend}
           value={character.friends[1].isCloseFriend}
         />
@@ -88,15 +98,18 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="2"
           id="2"
+          className="form-check-input mt-0"
           onChange={selectRival}
           value={character.friends[1].isRival}
         />
+        </div>
 
-
+        <div class="input-group-text input-group-sm">
         <input 
           type="text"
           name="3"
           id="3"
+          className="form-control"
           onChange={updateFriend}
           value={friends[2].name}
         />
@@ -104,6 +117,7 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="3"
           id="3"
+          className="form-check-input mt-0"
           onChange={selectCloseFriend}
           value={character.friends[2].isCloseFriend}
         />
@@ -111,14 +125,18 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="3"
           id="3"
+          className="form-check-input mt-0"
           onChange={selectRival}
           value={character.friends[2].isRival}
         />
+        </div>
 
+        <div class="input-group-text input-group-sm">
         <input 
           type="text"
           name="4"
           id="4"
+          className="form-control"
           onChange={updateFriend}
           value={friends[3].name}
         />
@@ -126,6 +144,7 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="4"
           id="4"
+          className="form-check-input mt-0"
           onChange={selectCloseFriend}
           value={character.friends[3].isCloseFriend}
         />
@@ -133,14 +152,18 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="4"
           id="4"
+          className="form-check-input mt-0"
           onChange={selectRival}
           value={character.friends[3].isRival}
         />
+        </div>
 
+        <div class="input-group-text input-group-sm">
         <input 
           type="text"
           name="5"
           id="5"
+          className="form-control"
           onChange={updateFriend}
           value={friends[4].name}
         />
@@ -148,6 +171,7 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="5"
           id="5"
+          className="form-check-input mt-0"
           onChange={selectCloseFriend}
           value={character.friends[4].isCloseFriend}
         />
@@ -155,9 +179,11 @@ export default function SelectFriends({ character, setCharacter }) {
           type="checkbox"
           name="5"
           id="5"
+          className="form-check-input mt-0"
           onChange={selectRival}
           value={character.friends[4].isRival}
         />
+      </div>
     </>
   )
 }

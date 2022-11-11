@@ -7,7 +7,9 @@ import SelectFriends from "../components/SelectFriends"
 import items from '../data/items'
 import SelectItems from "../components/SelectItems"
 import Skills from "../components/Skills"
-import Coin from "../components/Coin"
+import XPTriggers from "../components/XPTriggers"
+import Notes from "../components/Notes"
+import ShowItems from "../components/ShowItems"
 
 export default function CreateCharacter({ user }) {
 
@@ -86,6 +88,8 @@ export default function CreateCharacter({ user }) {
     insightXP: 0,
     prowessXP: 0,
     resolveXP: 0,
+    trigger1: '',
+    trigger2: ''
   })
 
   const markClock = (e) => {
@@ -121,35 +125,61 @@ export default function CreateCharacter({ user }) {
     <>
     <form>
 
-      {/* <SelectAbility character={character} setCharacter={setCharacter} /> */}
+    <div id="create-character">
 
-      {/* <SelectFriends 
-        updateCharacter={updateCharacter}
-        setCharacter={setCharacter}
-        character={character}
-      /> */}
+      <div className="info">
+        <CharacterInfo 
+          updateCharacter={updateCharacter} 
+          character={character} />
+      </div>
 
-      {/* <SelectItems
-        character={character}
-        setCharacter={setCharacter}
-      /> */}
+      <div className="abilities">
+        <SelectAbility character={character} setCharacter={setCharacter} /> 
+      </div>
 
-      <CharacterInfo 
-        updateCharacter={updateCharacter} 
-        character={character} />
+      <div className="friends">
+        <SelectFriends 
+          updateCharacter={updateCharacter}
+          setCharacter={setCharacter}
+          character={character}
+        />
+      </div>
 
+    <div className="items">
+      <SelectItems
+          character={character}
+          setCharacter={setCharacter}
+        />
+      <ShowItems items={character.items}/>
+    </div>
+
+    <div className="skills">
       <Skills
-        character={character}
-        markClock={markClock}
-      />
+          character={character}
+          markClock={markClock}
+        />
+    </div>
 
-      <Coin
+    <div className="xp">
+      <XPTriggers 
         character={character}
-        markClock={markClock}
+        updateCharacter={updateCharacter}
       />
-        
-      <button onClick={handleSubmit}>Save</button>
+    </div>
+
+    <div className="notes">
+      <Notes 
+        character={character}
+        updateCharacter={updateCharacter}
+      />
+    </div>
+
+      {/* <button onClick={handleSubmit}>Save</button> */}
+    
+    </div>
+
     </form>
+
     </>
   )
 }
