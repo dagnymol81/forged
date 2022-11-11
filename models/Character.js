@@ -28,7 +28,9 @@ const characterSchema = new Schema({
     level1Second: { type: String, default: '' },
     abilities: { type: Array, default: []},
     friends: [],
-    items: []
+    items: [],
+    coin: 0,
+    stash: 0,
   })
 
 const CharacterModel = mongoose.model('Character', characterSchema)

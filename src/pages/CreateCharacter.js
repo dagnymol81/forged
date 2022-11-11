@@ -66,8 +66,32 @@ export default function CreateCharacter({ user }) {
       closeFriend: false,
       rival: false,
     }],
-    items: items.standardItems
+    items: items.standardItems,
+    coin: 0,
+    stash: 0,
+    skill1: 0,
+    skill2: 0,
+    skill3: 0,
+    skill4: 0,
+    skill5: 0,
+    skill6: 0,
+    skill7: 0,
+    skill8: 0,
+    skill9: 0,
+    skill10: 0,
+    skill11: 0,
+    skill12: 0,
   })
+
+  const markClock = (e) => {
+    let clockName = e.target.parentNode.id //should match the name of the Character property we are changing
+    let container = document.getElementById(clockName) //div the inputs are in
+    let marked = container.querySelectorAll('input[type="checkbox"]:checked').length //how many are checked
+    setCharacter(existingValues => ({ //update state with new value for clock
+      ...existingValues,
+      [clockName]: marked
+    }))
+  }
   
   const updateCharacter = (e) => {
     const fieldName = e.target.name
