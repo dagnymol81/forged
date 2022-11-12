@@ -174,7 +174,7 @@ export default function CreateCharacter({ user }) {
       />
     </div>
 
-      {/* <button onClick={handleSubmit}>Save</button> */}
+      <button onClick={handleSubmit}>Save</button>
     
     </div>
 

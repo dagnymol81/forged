@@ -1,30 +1,32 @@
 import { useEffect } from "react"
+import { useRef } from "react"
 import { useState } from "react"
 import startingAbilities from '../data/abilities'
 
 export default function SelectAbility({ character, setCharacter }) {
 
   const [abilities, setAbilities] = useState([])
+  const nameRef = useRef()
+  const descRef = useRef()
+  const detailRef = useRef()
 
   const chooseAbility = (e) => {
-    setAbilities([...abilities, e.currentTarget.id])
+    e.currentTarget.classList.add("selected-ability")
+    const selectedAbility = startingAbilities.find(ability => ability.name === e.currentTarget.id)
+    setAbilities([...abilities, selectedAbility])
   }
 
-  const addCustomAbility = (e) => {
+  const addCustom = (e) => {
     e.preventDefault()
-    setAbilities([...abilities, ''])
-  }
-
-  const updateOneAbility = (e) => {
-    const index = Number(e.target.name)
-    const newAbilities = abilities.map((ability, i) => {
-      if (i === index) {
-        return e.target.value
-      } else {
-        return ability
-      }
-    })
-    setAbilities(newAbilities)
+    const newAbility = {
+      name: nameRef.current.value,
+      shortDesc: descRef.current.value,
+      detail: detailRef.current.value
+    }
+    setAbilities([...abilities, newAbility])
+    nameRef.current.value = ''
+    descRef.current.value = ''
+    detailRef.current.value = ''
   }
 
   useEffect(() => {
@@ -38,7 +40,7 @@ export default function SelectAbility({ character, setCharacter }) {
     <>
 
     
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Abilities
   </button>
 
@@ -52,26 +54,48 @@ export default function SelectAbility({ character, setCharacter }) {
       </div>
       <div class="modal-body">
 
-      <button onClick={addCustomAbility}>Add Custom Ability</button>
+      <div className="my-3">
+        <h3>Custom Ability</h3>
+        <div className="input-group m-1">
+          <span className="input-group-text">Name:</span>
+          <input type="text" name="custom-ability-name" ref={nameRef} className="form-control" />
+        </div>
 
-{abilities.map((box, i) => {
-  return(
-    <textarea 
-      key={i}
-      name={i}
-      defaultValue={abilities[i]} 
-      onChange={updateOneAbility}
-    />
-  )
-})}
+        <div className="input-group m-1">
+        <span className="input-group-text">Description:</span>
+          <input type="text" name="custom-ability-desc" ref={descRef} className="form-control" />
+        </div>
 
+        <div className="input-group m-1">
+        <span className="input-group-text">Details:</span>
+          <input type="text" name="custom-ability-details" ref={detailRef} className="form-control" />
+        </div>
+        <button onClick={addCustom} className="btn btn-light">Add Custom</button>
+      </div>
 
+      <div className="my-3">
+      <h3>My Abilities</h3>
+      {abilities.map((ability) => {
+        return(
+          <div key={ability.name} className="border p-2">
+          <p>
+          <strong>{ability.name}</strong> {ability.shortDesc}
+          </p><p>
+          {ability.detail}
+          </p>
+          </div>
+        )
+      })}
+      </div>
+
+      <h3>Available Abilities</h3>
       {startingAbilities.map((ability) => {
       return(
         <div 
           key={ability.name} 
           id={ability.name} 
           name={ability.name}
+          className="starting-ability border p-2"
           onClick={chooseAbility}
         >
           <h3>{ability.name}</h3>

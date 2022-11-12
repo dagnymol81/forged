@@ -153,3 +153,15 @@
   grid-template-areas:
     "skill-name skill-boxes"
 }
+
+.starting-ability {
+  cursor: pointer;
+}
+
+.starting-ability:hover {
+  background-color: gainsboro;
+}
+
+.selected-ability {
+  background-color:darkgray;
+}
