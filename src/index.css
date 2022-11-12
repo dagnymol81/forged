@@ -7,8 +7,9 @@
     "notes items skills"
     "friends items abilities"
     "xp items abilities";
-  gap: 2rem;
-  max-width: 1400px;
+  gap: 2rem 5rem;
+  padding:0 5rem;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
@@ -17,13 +18,20 @@
 .info {
   grid-area: info;
   display: grid;
-  gap: 1rem;
-  grid-template-columns: max-content 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+  grid-template-columns: max-content 1fr max-content 1fr max-content 1fr;
+  border: 1px solid gainsboro;
+  padding: 0.5rem;
+}
+
+.info input {
+  height: 2rem;
 }
 
 .name {
   grid-column-start: 1;
   grid-column-end: span 1;
+  width: 100%;
 }
 
 .name-input {
@@ -134,4 +142,14 @@
   width: 100%;
   height: 100%;
   padding: 1rem;
+}
+
+
+
+.skills-box {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0 1rem;
+  grid-template-areas:
+    "skill-name skill-boxes"
 }

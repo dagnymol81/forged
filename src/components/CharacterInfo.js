@@ -10,7 +10,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="characterName"
             id="characterName"
-            className="name-input"
+            className="name-input form-control"
             onChange={updateCharacter}
             value={character.characterName}
           />
@@ -24,7 +24,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="alias"
             id="alias"
-            className="alias-input"
+            className="alias-input form-control"
             onChange={updateCharacter}
             value={character.alias}
           />
@@ -37,7 +37,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="crew"
             id="crew"
-            className="crew-input"
+            className="crew-input form-control"
             onChange={updateCharacter}
             value={character.crew}
           />
@@ -50,7 +50,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="look"
             id="look"
-            className="look-input"
+            className="look-input form-control"
             onChange={updateCharacter}
             value={character.look}
           />
@@ -62,7 +62,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="heritage"
             id="heritage"
-            className="heritage-input"
+            className="heritage-input form-control"
             onChange={updateCharacter}
             value={character.heritage}
           />
@@ -75,7 +75,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="background"
             id="background"
-            className="background-input"
+            className="background-input form-control"
             onChange={updateCharacter}
             value={character.background}
           />
@@ -91,7 +91,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="vice"
             id="vice"
-            className="vice-input"
+            className="vice-input form-control"
             onChange={updateCharacter}
             value={character.vice}
           />
@@ -105,7 +105,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
             type="text"
             name="purveyor"
             id="purveyor"
-            className="purveyor-input"
+            className="purveyor-input form-control"
             onChange={updateCharacter}
             value={character.purveyor}
           />

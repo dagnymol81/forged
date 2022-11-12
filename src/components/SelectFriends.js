@@ -49,7 +49,7 @@ export default function SelectFriends({ character, setCharacter }) {
     <>
     <h3>Friends</h3>
 
-        <div class="input-group-text input-group-sm">
+        <div class="input-group-text input-group-sm bg-light">
           <input 
             type="text"
             name="1"
@@ -77,7 +77,7 @@ export default function SelectFriends({ character, setCharacter }) {
         </div>
 
 
-        <div class="input-group-text input-group-sm">
+        <div class="input-group-text input-group-sm bg-light">
         <input 
           type="text"
           name="2"
@@ -104,7 +104,7 @@ export default function SelectFriends({ character, setCharacter }) {
         />
         </div>
 
-        <div class="input-group-text input-group-sm">
+        <div class="input-group-text input-group-sm bg-light">
         <input 
           type="text"
           name="3"
@@ -131,7 +131,7 @@ export default function SelectFriends({ character, setCharacter }) {
         />
         </div>
 
-        <div class="input-group-text input-group-sm">
+        <div class="input-group-text input-group-sm bg-light">
         <input 
           type="text"
           name="4"
@@ -158,7 +158,7 @@ export default function SelectFriends({ character, setCharacter }) {
         />
         </div>
 
-        <div class="input-group-text input-group-sm">
+        <div class="input-group-text input-group-sm bg-light">
         <input 
           type="text"
           name="5"
