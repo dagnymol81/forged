@@ -46,6 +46,7 @@ export default function CharacterInfo({ updateCharacter, character }) {
           Look 
         </label>
 
+          <div className="look-input">
           <input
             type="text"
             name="look"
@@ -54,47 +55,55 @@ export default function CharacterInfo({ updateCharacter, character }) {
             onChange={updateCharacter}
             value={character.look}
           />
+          <em>Gender, appearance, typical attire</em>
+          </div>
 
         <label className="heritage" htmlFor="heritage">
           Heritage 
         </label>
+        <div className="heritage-input">
           <input
             type="text"
             name="heritage"
             id="heritage"
-            className="heritage-input form-control bg-secondary text-light"
+            className="form-control bg-secondary text-light"
             onChange={updateCharacter}
             value={character.heritage}
           />
+          <em>Describe where their family line is from.</em>
+          </div>
 
         <label className="background" htmlFor="background">
           Background 
         </label>
 
-          <input
-            type="text"
-            name="background"
-            id="background"
-            className="background-input form-control bg-secondary text-light"
-            onChange={updateCharacter}
-            value={character.background}
-          />
-
-
-
-
+            <div className="background-input">
+            <input
+              type="text"
+              name="background"
+              id="background"
+              className="form-control bg-secondary text-light"
+              onChange={updateCharacter}
+              value={character.background}
+            />
+            <em>Academic - Labor - Law - Trade - Military - Noble - Underworld</em>
+          </div>
+          
         <label className="vice" htmlFor="vice">
           Vice
         </label>
 
-          <input
-            type="text"
-            name="vice"
-            id="vice"
-            className="vice-input form-control bg-secondary text-light"
-            onChange={updateCharacter}
-            value={character.vice}
-          />
+          <div className="vice-input">
+            <input
+              type="text"
+              name="vice"
+              id="vice"
+              className="form-control bg-secondary text-light"
+              onChange={updateCharacter}
+              value={character.vice}
+            />
+            <em>Faith - Gambling - Luxury - Obligation - Pleasure - Stupor - Weird</em>
+          </div>
 
 
         <label className="purveyor" htmlFor="purveyor">

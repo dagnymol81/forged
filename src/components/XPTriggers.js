@@ -31,8 +31,9 @@ export default function XPTriggers({ character, updateCharacter }) {
           value={character.trigger1}
         />
       </div>
-
-      
+      <p>
+      <em>Examples: <strong>violence</strong> or <strong>intimidation</strong>, <strong>technical skill</strong> or <strong>mayhem</strong>,  <strong>stealth</strong> or <strong>evasion</strong>, <strong>deception</strong> or <strong>influence</strong>, <strong>knowledge</strong> or <strong>arcane power</strong>.</em>
+      </p>      
     </>
   )
 }

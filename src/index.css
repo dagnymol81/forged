@@ -3,6 +3,15 @@ body {
   color: whitesmoke;
 }
 
+a:link, a:visited {
+  color: lightgray;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  color: whitesmoke;
+}
+
 #create-character {
   display: grid;
   grid-template-rows: auto;
@@ -102,17 +111,17 @@ body {
 
 .vice-input {
   grid-column-start: 2;
-  grid-column-end: span 2;
+  grid-column-end: span 3;
 }
 
 .purveyor {
-  grid-column-start: 4;
+  grid-column-start: 5;
   grid-column-end: span 1;
   text-align: right;
 }
 
 .purveyor-input {
-  grid-column-start: 5;
+  grid-column-start: 6;
   grid-column-end: end;
 }
 
