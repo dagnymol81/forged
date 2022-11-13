@@ -6,6 +6,7 @@ export default function Notes({ character, updateCharacter }) {
       name="notes" 
       onChange={updateCharacter} 
       value={character.notes}  
+      className="bg-secondary text-light"
     />
   </>
   )

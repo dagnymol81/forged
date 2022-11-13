@@ -18,15 +18,15 @@ export default function XPTriggers({ character, updateCharacter }) {
       <input 
           type="text"
           name="trigger1"
-          className="form-control"
+          className="form-control bg-secondary text-light"
           onChange={updateCharacter}
           value={character.trigger1}
         />
-        <span className="input-group-text">or</span>
+        <span className="input-group-text bg-dark text-light">or</span>
         <input 
           type="text"
           name="trigger2"
-          className="form-control"
+          className="form-control bg-secondary text-light"
           onChange={updateCharacter}
           value={character.trigger1}
         />

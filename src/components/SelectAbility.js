@@ -40,14 +40,14 @@ export default function SelectAbility({ character, setCharacter }) {
     <>
 
     
-  <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Abilities
   </button>
 
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
-    <div class="modal-content">
+    <div class="modal-content bg-dark">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Abilities</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -57,20 +57,20 @@ export default function SelectAbility({ character, setCharacter }) {
       <div className="my-3">
         <h3>Custom Ability</h3>
         <div className="input-group m-1">
-          <span className="input-group-text">Name:</span>
-          <input type="text" name="custom-ability-name" ref={nameRef} className="form-control" />
+          <span className="input-group-text bg-dark text-light">Name:</span>
+          <input type="text" name="custom-ability-name" ref={nameRef} className="form-control bg-secondary text-light" />
         </div>
 
         <div className="input-group m-1">
-        <span className="input-group-text">Description:</span>
-          <input type="text" name="custom-ability-desc" ref={descRef} className="form-control" />
+        <span className="input-group-text bg-dark text-light">Description:</span>
+          <input type="text" name="custom-ability-desc" ref={descRef} className="form-control bg-secondary text-light" />
         </div>
 
         <div className="input-group m-1">
-        <span className="input-group-text">Details:</span>
-          <input type="text" name="custom-ability-details" ref={detailRef} className="form-control" />
+        <span className="input-group-text bg-dark text-light">Details:</span>
+          <input type="text" name="custom-ability-details" ref={detailRef} className="form-control bg-secondary text-light" />
         </div>
-        <button onClick={addCustom} className="btn btn-light">Add Custom</button>
+        <button onClick={addCustom} className="btn btn-secondary text-dark">Add Custom</button>
       </div>
 
       <div className="my-3">

@@ -33,7 +33,7 @@ useEffect(() => {
       type="text"
       name="0"
       id="0"
-      className="form-control"
+      className="form-control bg-secondary text-light"
       value={myItems[0].name}
       onChange={updateItems}
     />
@@ -41,7 +41,7 @@ useEffect(() => {
       type="text"
       name="1"
       id="1"
-      className="form-control"
+      className="form-control bg-secondary text-light"
       value={myItems[1].name}
       onChange={updateItems}
     />
@@ -49,7 +49,7 @@ useEffect(() => {
       type="text"
       name="2"
       id="2"
-      className="form-control"
+      className="form-control bg-secondary text-light"
       value={myItems[2].name}
       onChange={updateItems}
     />
@@ -57,7 +57,7 @@ useEffect(() => {
       type="text"
       name="3"
       id="3"
-      className="form-control"
+      className="form-control bg-secondary text-light"
       value={myItems[3].name}
       onChange={updateItems}
     />
@@ -65,7 +65,7 @@ useEffect(() => {
       type="text"
       name="4"
       id="4"
-      className="form-control"
+      className="form-control bg-secondary text-light"
       value={myItems[4].name}
       onChange={updateItems}
     />

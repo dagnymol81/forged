@@ -1,17 +1,24 @@
 export default function ShowItems({ items }) {
   return(
     <>
-    <ul>
+    <h3 className="mt-3">All Items</h3>
+    <table className="table table-dark table-sm">
+      <thead className="bg-dark">
+        <td>Item</td><td>Load</td>
+      </thead>
     {items && items.map((item, i) => {
       if (item.name !== '') {
         return(
-          <li key={i}>
-            {item.name}
-          </li>
+          <tr>
+            <td>{item.name}</td>
+            <td>{item.load}</td>
+          </tr>
+            
+         
         )
       }
       })}
-    </ul>
+    </table>
     </>
   )
 }

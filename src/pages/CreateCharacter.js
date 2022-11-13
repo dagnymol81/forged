@@ -127,7 +127,7 @@ export default function CreateCharacter({ user }) {
 
     <div id="create-character">
 
-      <div className="info bg-light">
+      <div className="info">
         <CharacterInfo 
           updateCharacter={updateCharacter} 
           character={character} />

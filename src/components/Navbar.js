@@ -11,7 +11,7 @@ function Navbar({ user, setUser }) {
     if (user) {
         return (
           
-          <nav className="navbar navbar-expand-lg bg-light">
+          <nav className="navbar navbar-expand-lg  bg-secondary text-light">
           
             <ul className="nav w-100 px-3 flex-row justify-content-between align-items-center">
           
