@@ -178,3 +178,16 @@ a:hover {
 .selected-ability {
   background-color:#343434;
 }
+
+#save {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 5rem;
+}
+
+.item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

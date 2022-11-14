@@ -38,21 +38,38 @@ export default function SelectAbility({ character, setCharacter }) {
 
   return(
     <>
+  <h3 className="my-3">Abilities</h3>
+  <p>
+    <em>Select one special ability.</em>
+      </p><p>
+      <em>You may choose an additional ability when you fill your playbook XP.</em>
+  </p>
 
+  {abilities.map((ability) => {
+        return(
+          <div key={ability.name} className="border p-2">
+          <p>
+          <strong>{ability.name}</strong> {ability.shortDesc}
+          </p><p>
+          {ability.detail}
+          </p>
+          </div>
+        )
+      })}
     
-  <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Abilities
+  <button type="button" className="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Abilities
   </button>
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content bg-dark">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Abilities</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog modal-xl">
+    <div className="modal-content bg-dark">
+      <div className="modal-header">
+        <h1 className="modal-title fs-5" id="exampleModalLabel">Abilities</h1>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div className="modal-body">
 
       <div className="my-3">
         <h3>Custom Ability</h3>
@@ -107,8 +124,8 @@ export default function SelectAbility({ character, setCharacter }) {
     })}
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

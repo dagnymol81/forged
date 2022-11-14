@@ -5,8 +5,7 @@ export default function Skills({ character, markClock }) {
   return(
     <>
         <h3>Insight</h3>
-        
-        
+               
         <MarkXP stat={character.insightXP} markClock={markClock} statName="insightXP" />
 
         <div className="skills-box">
@@ -160,6 +159,9 @@ export default function Skills({ character, markClock }) {
       </div>
 
       </div>
+
+        <MarkXP stat={character.playbookXP} markClock={markClock} statName="playbook" />
+      
 
     </div>
   </>

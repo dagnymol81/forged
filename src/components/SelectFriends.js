@@ -93,23 +93,6 @@ export default function SelectFriends({ character, setCharacter }) {
             value={friends[0].name}
           />
 
-          {/* <input
-            type="checkbox"
-            name="1"
-            id="1"
-            className="form-check-input mt-0 bg-secondary text-light"
-            onChange={selectCloseFriend}
-            value={character.friends[0].isCloseFriend}
-          />
-          <input
-            type="checkbox"
-            name="1"
-            id="1"
-            className="form-check-input mt-0 bg-secondary text-light"
-            onChange={selectRival}
-            value={character.friends[0].isRival}
-          /> */}
-
           <img 
             src={up} 
             alt="Select Close Friend" 
@@ -128,7 +111,7 @@ export default function SelectFriends({ character, setCharacter }) {
         </div>
 
 
-        <div class="input-group-text input-group-sm bg-dark text-light">
+        <div className="input-group-text input-group-sm bg-dark text-light">
         <input 
           type="text"
           name="2"
@@ -153,7 +136,7 @@ export default function SelectFriends({ character, setCharacter }) {
           />
         </div>
 
-        <div class="input-group-text input-group-sm bg-dark text-light">
+        <div className ="input-group-text input-group-sm bg-dark text-light">
         <input 
           type="text"
           name="3"
@@ -178,7 +161,7 @@ export default function SelectFriends({ character, setCharacter }) {
           />
         </div>
 
-        <div class="input-group-text input-group-sm bg-dark text-light">
+        <div className="input-group-text input-group-sm bg-dark text-light">
         <input 
           type="text"
           name="4"
@@ -203,7 +186,7 @@ export default function SelectFriends({ character, setCharacter }) {
           />
         </div>
 
-        <div class="input-group-text input-group-sm bg-dark text-light">
+        <div className="input-group-text input-group-sm bg-dark text-light">
         <input 
           type="text"
           name="5"

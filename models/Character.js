@@ -47,7 +47,8 @@ const characterSchema = new Schema({
     prowessXP: 0,
     resolveXP: 0,
     trigger1: '',
-    trigger2: ''
+    trigger2: '',
+    playbook: 0
   })
 
 const CharacterModel = mongoose.model('Character', characterSchema)

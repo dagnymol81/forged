@@ -89,7 +89,8 @@ export default function CreateCharacter({ user }) {
     prowessXP: 0,
     resolveXP: 0,
     trigger1: '',
-    trigger2: ''
+    trigger2: '',
+    playbook: 0,
   })
 
   const markClock = (e) => {
@@ -124,9 +125,14 @@ export default function CreateCharacter({ user }) {
   return(
     <>
     <form>
+ 
+    <div id="save">
+      <button onClick={handleSubmit} className="btn btn-dark border">Save Character</button>
+    </div>
+
 
     <div id="create-character">
-
+   
       <div className="info">
         <CharacterInfo 
           updateCharacter={updateCharacter} 
@@ -174,7 +180,7 @@ export default function CreateCharacter({ user }) {
       />
     </div>
 
-      <button onClick={handleSubmit}>Save</button>
+      
     
     </div>
 

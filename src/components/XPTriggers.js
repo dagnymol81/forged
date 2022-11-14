@@ -14,7 +14,7 @@ export default function XPTriggers({ character, updateCharacter }) {
         <li>You addressed a challenge with:</li>
       </ul>
 
-      <div class="input-group">
+      <div className="input-group">
       <input 
           type="text"
           name="trigger1"
@@ -28,7 +28,7 @@ export default function XPTriggers({ character, updateCharacter }) {
           name="trigger2"
           className="form-control bg-secondary text-light"
           onChange={updateCharacter}
-          value={character.trigger1}
+          value={character.trigger2}
         />
       </div>
       <p>

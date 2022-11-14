@@ -82,7 +82,7 @@ const handleEditMode = () => {
     <div>
     <h1>Show</h1>
 
-    {character && character.characterName}
+
 
     <button onClick={handleEditMode}>Toggle Edit</button>
     
@@ -90,18 +90,18 @@ const handleEditMode = () => {
 
     <form onSubmit={handleSubmit}>
 
-      {character && !editMode &&
+      {character.characterName && !editMode &&
         <ShowInfo 
           character={character} 
         />}
 
-      {character && editMode &&
+      {character.characterName && editMode &&
         <CharacterInfo
           updateCharacter={updateCharacter} 
           character={character}
         />}
 
-      {character && 
+      {character.characterName && 
         <Status 
           character={character} 
           updateCharacter={updateCharacter} 
@@ -109,12 +109,12 @@ const handleEditMode = () => {
           markClock={markClock} 
       />}
 
-      {character && 
+      {character.characterName && 
         <ShowAbilities
           abilities={character.abilities}
       />}
 
-      {character &&
+      {character.characterName &&
       <ShowItems
         items={character.items}
       />
