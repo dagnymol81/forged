@@ -1,7 +1,9 @@
 export default function Status({ updateCharacter, deployArmor, markClock, character }) {
 
   return (
+    <div id="status" className="border rounded-4 p-3">
     <div>
+    <h3>Status</h3>
       <div id="stress" className="input-group">
         <strong>Stress:&nbsp;</strong>
         <input type="checkbox" onChange={markClock} checked={character.stress >= 1} className="form-check-input bg-secondary" />
@@ -61,9 +63,10 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
         </label>
       </div>
       <br />
+      </div>
       <div>
         <strong>Injuries:</strong>
-        <div>
+        <div className="mt-3">
           Level 3:&nbsp;
             <input
               type="text"
@@ -107,10 +110,7 @@ export default function Status({ updateCharacter, deployArmor, markClock, charac
             className="form-text-input bg-secondary"
           />
         </div>
-
       </div>
-
-
     </div>
 
   )

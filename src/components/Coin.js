@@ -9,8 +9,7 @@ export default function Coin({character, markClock}) {
         <input type="checkbox" onChange={markClock} checked={character.coin >= 4} className="form-check-input bg-secondary" />
       </div>
       <div id="stash">
-        Stash:
-        <div className="input-group">
+        Stash:<br />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 1} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 2}  className="form-check-input bg-secondary"/>
         <input type="checkbox" onChange={markClock} checked={character.stash >= 3}  className="form-check-input bg-secondary"/>
@@ -21,7 +20,7 @@ export default function Coin({character, markClock}) {
         <input type="checkbox" onChange={markClock} checked={character.stash >= 8} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 9}  className="form-check-input bg-secondary"/>
         <input type="checkbox" onChange={markClock} checked={character.stash >= 10}  className="form-check-input bg-secondary" />
-        </div><div className="input-group">
+        <br />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 11} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 12} className="form-check-input bg-secondary"  />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 13}  className="form-check-input bg-secondary" />
@@ -32,8 +31,7 @@ export default function Coin({character, markClock}) {
         <input type="checkbox" onChange={markClock} checked={character.stash >= 18} className="form-check-input bg-secondary"  />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 19} className="form-check-input bg-secondary"  />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 20} className="form-check-input bg-secondary"  />
-        </div>
-        <div className="input-group">
+        <br />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 21} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 22}  className="form-check-input bg-secondary"/>
         <input type="checkbox" onChange={markClock} checked={character.stash >= 23} className="form-check-input bg-secondary" />
@@ -44,8 +42,7 @@ export default function Coin({character, markClock}) {
         <input type="checkbox" onChange={markClock} checked={character.stash >= 28} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 29} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 30} className="form-check-input bg-secondary" />
-        </div>
-        <div className="input-group">
+        <br />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 31}  className="form-check-input bg-secondary"/>
         <input type="checkbox" onChange={markClock} checked={character.stash >= 32} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 33} className="form-check-input bg-secondary" />
@@ -56,7 +53,7 @@ export default function Coin({character, markClock}) {
         <input type="checkbox" onChange={markClock} checked={character.stash >= 38} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 39} className="form-check-input bg-secondary" />
         <input type="checkbox" onChange={markClock} checked={character.stash >= 40} className="form-check-input bg-secondary" />
-        </div>
+        
       </div>
 
     </>

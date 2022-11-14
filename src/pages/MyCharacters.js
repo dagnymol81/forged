@@ -17,15 +17,18 @@ export default function MyCharacters ({ user }) {
         }
     }
 
+    //todo: limit by user
     useEffect(() => {
       getAllCharacters()
     }, [])
 
     return ( 
-        <div>
-            <h1>My Characters</h1>
-
+        <div className="container mt-3">
+            <h2>Profile</h2>
+            <p>username: {user}</p>
+            {/* <p>email: {email}</p> */}
             
+            <h2>My Characters</h2>
                 {characterList.map(t => 
                     <div key={t._id}> 
                     <Link to={`/${t._id}`}>

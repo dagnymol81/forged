@@ -1,6 +1,23 @@
+@font-face {
+  font-family: 'kirstyregular';
+  src: url('kirsty-webfont.woff2') format('woff2'),
+       url('kirsty-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  font-family: kirstyregular, serif;
+}
+
 body {
   background-color: #343434;
   color: whitesmoke;
+}
+
+textarea {
+  width: 15rem;
+  height: 80%;
 }
 
 a:link, a:visited {
@@ -10,6 +27,11 @@ a:link, a:visited {
 }
 a:hover {
   color: whitesmoke;
+}
+
+.friendlist {
+  list-style: none;
+  margin-left: -1rem;
 }
 
 #create-character {
@@ -29,10 +51,6 @@ a:hover {
   margin-top: 2rem;
 }
 
-.nameheader {
-  text-align: center;
-}
-
 #show-character {
   padding:0 5rem;
   max-width: 1600px;
@@ -44,16 +62,29 @@ a:hover {
   gap: 5rem;
 }
 
-#information, #notes {
+#information {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 5rem;
-  margin-top: 5rem;
 }
 
-.show-info {
-  font-size: 1.5rem;
+#notes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: auto;
+  gap: 5rem;
+}
+
+.show-friends {
+  min-width: fit-content;
+}
+
+#status {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .info {

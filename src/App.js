@@ -14,6 +14,7 @@ import Register from "./pages/Register";
 // import Todos from "./pages/Todos";
 
 import userService from './services/userService'
+import About from "./pages/About";
 
 let initialRender = true
 
@@ -94,6 +95,13 @@ function App() {
                         <MyCharacters 
                           user={user.username} 
                         />} /> 
+
+                        
+                      <Route 
+                        path='/about' 
+                        element={
+                        <About /> 
+                        } />
 
                       <Route 
                         path='/:id' 

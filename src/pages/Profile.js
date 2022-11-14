@@ -1,8 +1,8 @@
-function Profile({ username, email }) {
+function Profile({ user, email }) {
     return ( 
         <div>
             <h1>Profile</h1>
-            <p>username: {username}</p>
+            <p>username: {user}</p>
             <p>email: {email}</p>
         </div>
         

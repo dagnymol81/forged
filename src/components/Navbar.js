@@ -11,13 +11,13 @@ function Navbar({ user, setUser }) {
     if (user) {
         return (
           
-          <nav className="nav bg-secondary text-light">
+          <nav className="nav bg-secondary border-bottom p-3">
           
             <ul className="nav w-100 px-3 flex-row justify-content-between align-items-center">
           
                 <li className="nav-item">
                     <Link to="/">
-                    <img src={logo} alt="Forged in the Dark" width="152px" height="72px"  />
+                    <img src={logo} alt="Forged in the Dark" width="114px" height="54px"  />
                     </Link>
                 </li>
                 <li className="nav-item">
@@ -26,11 +26,11 @@ function Navbar({ user, setUser }) {
                 <li className="nav-item">
                     <Link to="/create">New Character</Link>
                 </li>
-                <li className="nav-item">
-                    <Link to="/profile">Profile</Link>
+                  <li className="nav-item">
+                  <Link to="/crew">Profile</Link>
                 </li>
-                <li className="nav-item">
-                  <Link to="/crew">My Characters</Link>
+                <li>
+                  <Link to="/about">About</Link>
                 </li>
                 <li onClick={logout} className="nav-item">
                     <Link>Logout</Link>

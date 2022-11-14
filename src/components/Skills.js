@@ -160,7 +160,7 @@ export default function Skills({ character, markClock }) {
 
       </div>
 
-        <MarkXP stat={character.playbookXP} markClock={markClock} statName="playbook" />
+        <MarkXP stat={character.playbook} markClock={markClock} statName="playbook" />
       
 
     </div>

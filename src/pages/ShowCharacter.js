@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useEffect, } from "react";
 import { useParams } from "react-router-dom";
-import CharacterInfo from "../components/CharacterInfo";
 import Notes from "../components/Notes";
 import ShowAbilities from "../components/ShowAbilities";
 import ShowInfo from "../components/ShowInfo";
@@ -14,9 +13,11 @@ import Teamwork from '../components/Teamwork'
 import Planning from '../components/Planning'
 import GatherInfo from '../components/GatherInfo'
 import Bonus from "../components/Bonus";
-import XPTriggers from "../components/XPTriggers";
-import SelectFriends from "../components/SelectFriends";
 import ShowFriends from "../components/ShowFriends";
+import ShowXPTriggers from '../components/ShowXPTriggers'
+
+//friends
+//load
 
 export default function ShowCharacter() {
    
@@ -96,27 +97,31 @@ const handleEditMode = () => {
 <div id="show-character">
 
   <div className="show-body">
-
+    
+    <div className="border rounded-4 p-3 my-3">
     <ShowInfo character={character} />
-    <ShowAbilities character={character} />
+    </div>
     <Status character={character} updateCharacter={updateCharacter} deployArmor={deployArmor} markClock={markClock} />
+    <div className="border p-3 rounded-4 my-3">
+    <ShowAbilities character={character} />
+    </div>
 
-    <div id="notes">
+    <div id="notes" className="border rounded-4 p-3">
       <div>
       <Notes character={character} updateCharacter={updateCharacter} />
       </div>
 
       <div>
-      <XPTriggers character={character} updateCharacter={updateCharacter} />
+      <ShowXPTriggers character={character} />
       </div>
 
-      <div>
-        <ShowFriends friends={character.friends} />
+      <div className="show-friends">
+      <ShowFriends friends={character.friends} />
       </div>
 
     </div>
 
-    <div id="information">
+    <div id="information"  className="border rounded-4 p-3 my-3">
     <Teamwork />
     <Planning />
     <GatherInfo />
@@ -126,7 +131,9 @@ const handleEditMode = () => {
     
   <div className="show-sidebar">
     <Coin character={character} markClock={markClock} />
+    <div className="my-3">
     <Skills character={character} markClock={markClock} />
+    </div>
     <Bonus />
     <ShowItems items={character.items} />
 
