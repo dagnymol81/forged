@@ -1,14 +1,17 @@
 export default function ShowInfo({ character }) {
   return(
-  <div>
-    Character Name: {character.characterName}<br />
-    Crew: {character.crew}<br />
-    Alias: {character.alias}<br />
-    Look: {character.look}<br />
-    Heritage: {character.heritage}<br />
-    Background: {character.background}<br />
-    Vice: {character.vice}<br />
-    Purveyor: {character.purveyor}
-  </div>
+  <>
+    <h1>{character.characterName}</h1>
+    <p className="show-info">
+      <strong>Crew:</strong> {character.crew} &nbsp; 
+      <strong>Alias:</strong> {character.alias}<br />
+      <strong>Look:</strong> {character.look}<br />
+      <strong>Heritage:</strong> {character.heritage}<br />
+      <strong>Background:</strong> {character.background}<br />
+      <strong>Vice:</strong> {character.vice}&nbsp;
+      <strong>Purveyor:</strong> {character.purveyor}
+    </p>
+
+  </>
   )
 }

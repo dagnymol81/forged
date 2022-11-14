@@ -2,11 +2,21 @@ import { useState } from "react";
 import { useEffect, } from "react";
 import { useParams } from "react-router-dom";
 import CharacterInfo from "../components/CharacterInfo";
+import Notes from "../components/Notes";
 import ShowAbilities from "../components/ShowAbilities";
 import ShowInfo from "../components/ShowInfo";
 import ShowItems from "../components/ShowItems";
 import Status from "../components/Status";
 import characterService from '../services/characterService'
+import Coin from '../components/Coin'
+import Skills from '../components/Skills'
+import Teamwork from '../components/Teamwork'
+import Planning from '../components/Planning'
+import GatherInfo from '../components/GatherInfo'
+import Bonus from "../components/Bonus";
+import XPTriggers from "../components/XPTriggers";
+import SelectFriends from "../components/SelectFriends";
+import ShowFriends from "../components/ShowFriends";
 
 export default function ShowCharacter() {
    
@@ -79,49 +89,51 @@ const handleEditMode = () => {
 }
 
   return ( 
-    <div>
-    <h1>Show</h1>
-
-
-
-    <button onClick={handleEditMode}>Toggle Edit</button>
     
-    <p>{editMode}</p>
 
-    <form onSubmit={handleSubmit}>
+<form>
 
-      {character.characterName && !editMode &&
-        <ShowInfo 
-          character={character} 
-        />}
+<div id="show-character">
 
-      {character.characterName && editMode &&
-        <CharacterInfo
-          updateCharacter={updateCharacter} 
-          character={character}
-        />}
+  <div className="show-body">
 
-      {character.characterName && 
-        <Status 
-          character={character} 
-          updateCharacter={updateCharacter} 
-          deployArmor={deployArmor} 
-          markClock={markClock} 
-      />}
+    <ShowInfo character={character} />
+    <ShowAbilities character={character} />
+    <Status character={character} updateCharacter={updateCharacter} deployArmor={deployArmor} markClock={markClock} />
 
-      {character.characterName && 
-        <ShowAbilities
-          abilities={character.abilities}
-      />}
+    <div id="notes">
+      <div>
+      <Notes character={character} updateCharacter={updateCharacter} />
+      </div>
 
-      {character.characterName &&
-      <ShowItems
-        items={character.items}
-      />
-      }
+      <div>
+      <XPTriggers character={character} updateCharacter={updateCharacter} />
+      </div>
 
-        <button>Update</button>
-      </form>
+      <div>
+        <ShowFriends friends={character.friends} />
+      </div>
+
     </div>
+
+    <div id="information">
+    <Teamwork />
+    <Planning />
+    <GatherInfo />
+    </div>
+
+  </div>
+    
+  <div className="show-sidebar">
+    <Coin character={character} markClock={markClock} />
+    <Skills character={character} markClock={markClock} />
+    <Bonus />
+    <ShowItems items={character.items} />
+
+  </div>
+</div>
+
+    <button onClick={handleSubmit}>Save Changes</button>
+    </form>
   );
 }

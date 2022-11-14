@@ -2,7 +2,9 @@ export default function Planning() {
   return(
     <div>
       <h3>Planning and Load</h3>
-      <p>Choose a <strong>plan</strong>, provide the <em>detail</em>. Choose your <strong>load limit</strong> for the operation.</p>
+      <p>Choose a <strong>plan</strong>, provide the <em>detail</em>.
+      <br />
+      Choose your <strong>load limit</strong> for the operation.</p>
       <ul>
         <li><strong>Assault: </strong><em>point of attack</em></li>
         <li><strong>Deception: </strong><em>method</em></li>

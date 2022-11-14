@@ -29,6 +29,33 @@ a:hover {
   margin-top: 2rem;
 }
 
+.nameheader {
+  text-align: center;
+}
+
+#show-character {
+  padding:0 5rem;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+#information, #notes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+.show-info {
+  font-size: 1.5rem;
+}
+
 .info {
   grid-area: info;
   display: grid;
