@@ -94,6 +94,7 @@ function App() {
                         element={
                         <MyCharacters 
                           user={user.username} 
+                          email={user.email}
                         />} /> 
 
                         

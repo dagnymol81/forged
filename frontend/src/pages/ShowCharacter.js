@@ -70,7 +70,6 @@ export default function ShowCharacter() {
 
   const handleSubmit = async (e) => {
   e.preventDefault()
-
   try {
     const response = await characterService.update(character)
     console.log(response)
@@ -101,16 +100,15 @@ const handleEditMode = () => {
     <div className="border rounded-4 p-3 my-3">
     <ShowInfo character={character} />
     </div>
+    <div className="border rounded-4 p-3 my-3">
+    <button onClick={handleSubmit} className="btn btn-dark border">Save Changes</button>
+    </div>
     <Status character={character} updateCharacter={updateCharacter} deployArmor={deployArmor} markClock={markClock} />
     <div className="border p-3 rounded-4 my-3">
     <ShowAbilities character={character} />
     </div>
 
     <div id="notes" className="border rounded-4 p-3">
-      <div>
-      <Notes character={character} updateCharacter={updateCharacter} />
-      </div>
-
       <div>
       <ShowXPTriggers character={character} />
       </div>
@@ -121,26 +119,37 @@ const handleEditMode = () => {
 
     </div>
 
+    <div className="border rounded-4 p-3 my-3">
+      <Notes character={character} updateCharacter={updateCharacter} />
+    </div>
+
     <div id="information"  className="border rounded-4 p-3 my-3">
     <Teamwork />
     <Planning />
     <GatherInfo />
     </div>
 
-  </div>
+    </div>
     
   <div className="show-sidebar">
+    <div className="border rounded-4 p-3 my-3">
     <Coin character={character} markClock={markClock} />
-    <div className="my-3">
+    </div>
+    <div className="border rounded-4 p-3 my-3">
     <Skills character={character} markClock={markClock} />
     </div>
+    <div className="border rounded-4 p-3 my-3">
     <Bonus />
+    </div>
+    <div className="border rounded-4 p-3 my-3">
     <ShowItems items={character.items} />
+    </div>
 
   </div>
+  
 </div>
 
-    <button onClick={handleSubmit}>Save Changes</button>
-    </form>
+
+</form>
   );
 }

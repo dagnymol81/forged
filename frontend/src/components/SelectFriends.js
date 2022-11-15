@@ -72,7 +72,7 @@ export default function SelectFriends({ character, setCharacter }) {
 
   return(
     <>
-    <h3 className="py-3">Friends</h3>
+    <h3>Friends</h3>
     <p>
     List the names of five friends or rivals, along with a brief description.
     </p><p>
@@ -83,12 +83,12 @@ export default function SelectFriends({ character, setCharacter }) {
     <p>
       Select the <img src={down} alt="down arrow" /> next to one to indicate a rival.
     </p>
-        <div className="input-group-text input-group-sm bg-dark text-light">
+        <div className="input-group-text input-group-sm bg-dark text-light w-100">
           <input 
             type="text"
             name="1"
             id="1"
-            className="form-control  bg-secondary text-light"
+            className="form-control bg-secondary text-light"
             onChange={updateFriend}
             value={friends[0].name}
           />
@@ -111,7 +111,7 @@ export default function SelectFriends({ character, setCharacter }) {
         </div>
 
 
-        <div className="input-group-text input-group-sm bg-dark text-light">
+        <div className="input-group-text input-group-sm bg-dark text-light w-100">
         <input 
           type="text"
           name="2"
@@ -136,7 +136,7 @@ export default function SelectFriends({ character, setCharacter }) {
           />
         </div>
 
-        <div className ="input-group-text input-group-sm bg-dark text-light">
+        <div className ="input-group-text input-group-sm bg-dark text-light w-100">
         <input 
           type="text"
           name="3"
@@ -161,7 +161,7 @@ export default function SelectFriends({ character, setCharacter }) {
           />
         </div>
 
-        <div className="input-group-text input-group-sm bg-dark text-light">
+        <div className="input-group-text input-group-sm bg-dark text-light w-100">
         <input 
           type="text"
           name="4"
@@ -186,7 +186,7 @@ export default function SelectFriends({ character, setCharacter }) {
           />
         </div>
 
-        <div className="input-group-text input-group-sm bg-dark text-light">
+        <div className="input-group-text input-group-sm bg-dark text-light w-100">
         <input 
           type="text"
           name="5"

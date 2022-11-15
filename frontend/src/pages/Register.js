@@ -45,6 +45,7 @@ function Register({ setUser }) {
     return ( 
         <div className="container my-3">
             <h1>Register</h1>
+            <p>Registration is free and we won't spam you or sell your information!</p>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <br />

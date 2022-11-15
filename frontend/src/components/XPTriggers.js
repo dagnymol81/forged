@@ -10,11 +10,11 @@ export default function XPTriggers({ character, updateCharacter }) {
       </p>
       <ul>
         <li>You expressed your beliefs, drives, heritage, or background</li>
-        <li>You struggled wioth issues from your vice or traumas during the session</li>
+        <li>You struggled with issues from your vice or traumas during the session</li>
         <li>You addressed a challenge with:</li>
       </ul>
 
-      <div className="input-group">
+      <div className="input-group  w-100 mb-3">
       <input 
           type="text"
           name="trigger1"

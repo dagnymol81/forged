@@ -15,11 +15,6 @@ body {
   color: whitesmoke;
 }
 
-textarea {
-  width: 15rem;
-  height: 80%;
-}
-
 a:link, a:visited {
   color: lightgray;
   text-decoration: none;
@@ -35,20 +30,39 @@ a:hover {
 }
 
 #create-character {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto;
-  grid-template-areas:
-    "info info skills"
-    "notes items skills"
-    "friends items abilities"
-    "xp items abilities";
-  gap: 2rem 5rem;
+  display: flex;
+  flex-direction: row;
   padding:0 5rem;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
+  gap: 2rem;
+}
+
+.friends-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.friends-row div {
+  width: 50%;
+}
+
+textarea {
+  width: 100%;
+  height: 5rem;
+}
+
+
+.save-character {
+  grid-area: save;
+  height: fit-content;
+}
+
+.create-header {
+  grid-area: header;
 }
 
 #show-character {
@@ -59,7 +73,7 @@ a:hover {
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 #information {
@@ -85,6 +99,13 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+header {
+  max-width: 1450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
 
 .info {
@@ -183,40 +204,6 @@ a:hover {
   grid-column-end: end;
 }
 
-
-.abilities {
-  grid-area: abilities
-}
-
-.friends {
-  grid-area: friends;
-  padding: 1rem 0;
-}
-
-.items {
-  grid-area: items
-}
-
-.skills {
-  grid-area: skills
-}
-
-.xp {
-  grid-area: xp
-}
-
-.notes {
-  grid-area: notes
-}
-
-.notes textarea {
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-}
-
-
-
 .skills-box {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -248,4 +235,11 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.character-card {
+  border: 1px solid whitesmoke;
+  width: fit-content;
+  padding: 1rem;
+  margin: 1rem;
 }

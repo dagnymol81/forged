@@ -125,33 +125,74 @@ export default function CreateCharacter({ user }) {
   return(
     <>
     <form>
- 
-    <div id="save">
-      <button onClick={handleSubmit} className="btn btn-dark border">Save Character</button>
-    </div>
 
+    <header className="create-header">
+    <h1>Rogue's Gallery: Character Creation</h1>
+    </header>
 
     <div id="create-character">
-   
-      <div className="info">
+
+    <div>
+
+      <div className="info border rounded-4 p-3 my-3">
         <CharacterInfo 
           updateCharacter={updateCharacter} 
           character={character} />
       </div>
 
-      <div className="abilities">
-        <SelectAbility character={character} setCharacter={setCharacter} /> 
+      <div className="save-character border rounded-4 p-3 my-3">
+      <button onClick={handleSubmit} className="btn btn-dark border">Save Character</button>
       </div>
 
-      <div className="friends">
+    <div className="friends-row">
+      <div className="border rounded-4 p-3 my-3">
         <SelectFriends 
           updateCharacter={updateCharacter}
           setCharacter={setCharacter}
           character={character}
         />
       </div>
+      <div className="border rounded-4 p-3 my-3">
+      <XPTriggers 
+        character={character}
+        updateCharacter={updateCharacter}
+      />
+    </div>
+    </div>
 
-    <div className="items">
+
+
+      <div className="border rounded-4 p-3 my-3">
+          <SelectAbility character={character} setCharacter={setCharacter} /> 
+        </div>
+
+      <div className="border rounded-4 p-3 my-3">
+        <Notes 
+          character={character}
+          updateCharacter={updateCharacter}
+        />
+
+    </div>
+
+  </div>
+
+  <div>
+    
+    <div className="skills border rounded-4 p-3 my-3">
+      <Skills
+          character={character}
+          markClock={markClock}
+        />
+      <p>
+        Characters begin play with seven action dots. Three will be placed based on your playbook. 
+      </p><p> 
+        Assign <strong>four more dots:</strong> one to an action that reflects your <strong>heritage</strong>, one that reflects your <strong>background</strong>, and <strong>two more dots</strong> in any skills.
+      </p><p>
+        The <strong>maximum rating</strong> for any skill at character creation is <strong>two</strong>
+      </p>
+    </div>
+
+    <div className="items border rounded-4 p-3 my-3">
       <SelectItems
           character={character}
           setCharacter={setCharacter}
@@ -159,28 +200,9 @@ export default function CreateCharacter({ user }) {
       <ShowItems items={character.items}/>
     </div>
 
-    <div className="skills">
-      <Skills
-          character={character}
-          markClock={markClock}
-        />
-    </div>
 
-    <div className="xp">
-      <XPTriggers 
-        character={character}
-        updateCharacter={updateCharacter}
-      />
-    </div>
 
-    <div className="notes">
-      <Notes 
-        character={character}
-        updateCharacter={updateCharacter}
-      />
-    </div>
-
-      
+    </div>  
     
     </div>
 

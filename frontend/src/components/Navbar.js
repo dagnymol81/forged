@@ -1,12 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, navigate } from "react-router-dom";
 import logo from './fitd.png'
+import characterService from '../services/characterService'
+
 
 function Navbar({ user, setUser }) {
+
+  const location = useLocation()
 
     const logout = () => {
         setUser({})
         localStorage.removeItem("token")
     }
+
 
     if (user) {
         return (
@@ -22,6 +27,9 @@ function Navbar({ user, setUser }) {
                 </li>
                 <li className="nav-item">
                     Welcome {user}!
+                </li>
+                <li className="nav-item">
+
                 </li>
                 <li className="nav-item">
                     <Link to="/create">New Character</Link>
