@@ -33,7 +33,7 @@ function Register({ setUser }) {
 
             setUser(info.data)
 
-            navigate('/profile')
+            navigate('/create')
 
         } catch (error) {
             console.log(error.response.data.error)
@@ -43,7 +43,7 @@ function Register({ setUser }) {
     }
 
     return ( 
-        <>
+        <div className="container my-3">
             <h1>Register</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
@@ -78,7 +78,7 @@ function Register({ setUser }) {
                 <br /><br />
                 <button>Submit</button>
             </form>
-        </>
+        </div>
      );
 }
 

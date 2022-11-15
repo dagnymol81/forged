@@ -16,9 +16,9 @@ function Navbar({ user, setUser }) {
             <ul className="nav w-100 px-3 flex-row justify-content-between align-items-center">
           
                 <li className="nav-item">
-                    <Link to="/">
+
                     <img src={logo} alt="Forged in the Dark" width="114px" height="54px"  />
-                    </Link>
+
                 </li>
                 <li className="nav-item">
                     Welcome {user}!
@@ -41,19 +41,23 @@ function Navbar({ user, setUser }) {
         )
     } else {
         return (
-            <ul>
-                <li>
-                    <Link to="/">
-                        <img src="./favicon.ico" alt="React Icon" id="icon"/>
-                    </Link>
+          <nav className="nav bg-secondary border-bottom p-3">
+              <ul className="nav w-100 px-3 flex-row justify-content-between align-items-center">
+                <li  className="nav-item">
+                  <Link to="/"><img src={logo} alt="Forged in the Dark" width="114px" height="54px"  /></Link>
                 </li>
                 <li>
                     <Link to="/login">Login</Link>
                 </li>
-                <li>
+                <li  className="nav-item">
                     <Link to="/register">Register</Link>
                 </li>
+                <li  className="nav-item">
+                  <Link to="/about">About</Link>
+                </li>
             </ul>
+          </nav>
+
         )
     }
 }
