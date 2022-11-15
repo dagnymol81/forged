@@ -83,7 +83,18 @@ const login = async (req, res) => {
     }
 }
 
+const test = async (req, res) => {
+  try {
+    res.status(200).send("Hello!")
+  }
+  catch (error) {
+    console.log(error)
+    res.status(400).json({ error: error.message })
+  }
+}
+
 module.exports = {
     register,
-    login
+    login,
+    test
 }

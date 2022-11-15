@@ -11,7 +11,7 @@ export default function ShowFriends({friends}) {
     <ul className="friendlist">
     {friends && friends.map((friend) => {
       return(
-        <li>
+        <li key={friend.name}>
           <img src={up} alt="Up Arrow" />
           <img src={down} alt="Down Arrow" />
           {friend.name}

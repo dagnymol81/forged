@@ -17,7 +17,6 @@ export default function MyCharacters ({ user }) {
         }
     }
 
-    //todo: limit by user
     useEffect(() => {
       getAllCharacters()
     }, [])
@@ -26,7 +25,6 @@ export default function MyCharacters ({ user }) {
         <div className="container mt-3">
             <h2>Profile</h2>
             <p>username: {user}</p>
-            {/* <p>email: {email}</p> */}
             
             <h2>My Characters</h2>
                 {characterList.map(t => 
