@@ -10,6 +10,13 @@ Rogue's Gallery was created as the capstone project for the Per Scholas Software
 
 You can use the app for yourself at [https://forged-in-the-dark.netlify.app/](https://forged-in-the-dark.netlify.app/) or download the source code for your own install.
 
+## Planned features
+
+ - Mobile version
+ - Dice rolling
+ - Custom clocks
+ - Assemble a crew
+
 ## License
 
 MIT License
